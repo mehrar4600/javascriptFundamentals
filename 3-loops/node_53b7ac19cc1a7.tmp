@@ -1,0 +1,6 @@
+total = 0;
+for(num = 1; num<= 50; num =  num++){
+    
+    total = num +1;
+}
+console.log(total);
