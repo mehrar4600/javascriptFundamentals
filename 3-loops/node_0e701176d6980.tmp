@@ -1,4 +1,0 @@
-let name = 'kenn';
-for(name = 'kenn'; name[0]<=name[3]; name[0]=name[0]+1){
-    console.log(name[0]);
-}

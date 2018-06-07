@@ -9,7 +9,6 @@ awesome:true,
 cohort: 'javascript',
 week: 1
 }
-
 for(let item in student){
 console.log(item);
 console.log(student[item]);

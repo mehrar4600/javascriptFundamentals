@@ -17,7 +17,7 @@ laptop();
 var cats = (fleas, ticks) =>{
     console.log("cats have" + fleas + " and" + ticks);
 }
-cats('fleas', 'ticks');
+cats('flea', 'ticks');
 
 var turtle = shell()=>{
     console.log("turtle have" + shell);

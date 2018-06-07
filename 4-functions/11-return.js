@@ -20,9 +20,9 @@ const newName = capitalizeName("branDON");
 console.log(newName + ", how are you today?");
 
 //challenge ; make a tip calculator using a function
-function tipCalculator(numx,numy){
-    let netTotal = numx * numy;
+function tipCalculator(orderAmt, tipPer){
+    let netTotal = orderAmt * tipPer;
     return netTotal.toFixed(2);
 }
-let num5 = tipCalculator(5,6);
+let num5 = tipCalculator(8, 0.02);
 console.log(num5);
