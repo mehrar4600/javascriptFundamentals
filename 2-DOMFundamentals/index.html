@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Stuff</title>
+</head>
+<body>
+           <p id="testParagraph">sample text</p>
+           <p class="sampleClass">This Paragraph has the class of 'sample class'.</p>
+
+           <button id="clickThisButton" style = "float: right;" >CLICK ME</button>
+           <label for="nameInput">Enter Your Name:</label>
+           <input type="text" id="nameInput" placeholder="Rajni Mehra">
+    <script>
+        //write javascript 
+       //DOM-document object model-javascript interacting with html
+       //getelemenetbytag name then in (p)only
+       document.getElementById("testParagraph").style.color = "blue";
+         // console.log(document.getElementById("testParagraph").style.color);
+        console.log(document.querySelectorAll("p.sampleClass")); 
+        // console.log(document.querySelector("p"));
+        document.querySelectorAll("p.sampleClass")[0].innerHTML = "<i>My text has changed!!</i>";
+
+        //events-tracing the clicks; mouse clicks--each key holding specific ids
+        // document.getElementById("clickThisButton").addEventListener(actual event listenig("onKeyd"ownkeyup,keydown, whatever i want to do(function, fatarrow function)))
+        // document.getElementById("clickThisButton").addEventListener("click", (e) =>console.log("i was clicked"));
+        document.getElementById("clickThisButton").addEventListener("click", (details) =>{ 
+            if (details.target.style.backgroundColor =="red"){
+                details.target.style.backgroundColor ="blue";
+            } else{
+                details.target.style.backgroundColor = "red";
+            }
+        });
+        // document.getElementById("clickThisButton").addEventListener("ontoggle", (details)=>{details.target.style.backgroundColor="green";
+        document.getElementById("nameInput").addEventListener("keyup", e => 
+        {console.log(e.target.value);
+        console.log(document.getElementsByTagName('p'));
+        if(e.target.value == ""){
+            document.getElementsByTagName("p")[1].innerText = "NOTHING HAS BEEN TYPED";
+        }else {
+            document.getElementsByTagName("p")[1].innerText = `Everyone, say hello to 
+            ${e.target.value} right now`;
+        }        
+    });
+ </script>
+</body>
+</html>

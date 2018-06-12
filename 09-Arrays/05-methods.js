@@ -32,7 +32,7 @@ food.forEach((value, number) => {console.log(number, value);})
 
 //challenge:add movie, replace, use foreach to list your movies
 let movie = ['up', 'deadpool2', 'wolfchildren'];
-movie.forEach((value1, number1) => {console.log(number1, value1);})
+movie.forEach(value1 => console.log(value1));
 //movie.push('whatever');
-movie.splice(1,1,'abc');
-console.log(movie);
+//movie.splice(1,1,'abc');
+//console.log(movie);
